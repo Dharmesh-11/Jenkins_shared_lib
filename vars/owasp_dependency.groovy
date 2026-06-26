@@ -3,7 +3,7 @@ def call() {
 
         dependencyCheck(
             odcInstallation: 'OWASP',
-            additionalArguments: "--scan ./ --nvdApiKey ${NVD_API_KEY}"
+            additionalArguments: "--scan ./ --nvdApiKey=${NVD_API_KEY} --nvdApiDelay 5000"
         )
 
         dependencyCheckPublisher(
